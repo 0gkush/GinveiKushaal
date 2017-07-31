@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Ginvei</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="detail_activity">DetailACtivity</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="enter_email">User Email</string>
+    <string-array name="inventory_products">
+        <item>Product1</item>
+        <item>Product2</item>
+        <item>Product3</item>
+        <item>Product4</item>
+
+    </string-array>
+
+    <string-array name="product_description">
+        <item>Product1 Description</item>
+        <item>Product2 Description</item>
+        <item>Product3 Description</item>
+        <item>Product4 Description</item>
+    </string-array>
+    <string name="title_activity_demo">DemoActivity</string>
+</resources>
