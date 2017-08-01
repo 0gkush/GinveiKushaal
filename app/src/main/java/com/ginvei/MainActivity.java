@@ -44,8 +44,9 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-
+        android.app.FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.content_frame, new MainFragment())
+                .commit();
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -60,22 +61,22 @@ public class MainActivity extends AppCompatActivity
        /* productTitles = res.getStringArray(R.array.inventory_products);
         productDescription = res.getStringArray(R.array.product_description);*/
 
-        list.add(new InventoryItem("Google",R.drawable.google,"Google is social Media"));
-        list.add(new InventoryItem("Facebook",R.drawable.facebook,"Facebook is Social Media"));
-        list.add(new InventoryItem("Twitter",R.drawable.twitter, "Twitter is Social Media"));
-        list.add(new InventoryItem("Instagram",R.drawable.instagram, "Instagram is Social Media"));
-
-                 inventoryList = (ListView) findViewById(R.id.inventory_list);
-       inventoryList.setAdapter(new MyAdapter(list, this));
-        //MyAdapter adapter = new MyAdapter(this, productTitles, imgs, productDescription);
-        inventoryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                startDetailActivity(i);
-           }
-
-
-    });
+//        list.add(new InventoryItem("Google",R.drawable.google,"Google is social Media"));
+//        list.add(new InventoryItem("Facebook",R.drawable.facebook,"Facebook is Social Media"));
+//        list.add(new InventoryItem("Twitter",R.drawable.twitter, "Twitter is Social Media"));
+//        list.add(new InventoryItem("Instagram",R.drawable.instagram, "Instagram is Social Media"));
+//
+//                 inventoryList = (ListView) findViewById(R.id.inventory_list);
+//       inventoryList.setAdapter(new MyAdapter(list, this));
+//        //MyAdapter adapter = new MyAdapter(this, productTitles, imgs, productDescription);
+//        inventoryList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                startDetailActivity(i);
+//           }
+//
+//
+//    });
 
 
 
@@ -83,13 +84,13 @@ public class MainActivity extends AppCompatActivity
 
 
 }
-    public void startDetailActivity(int i) {
-        Intent detailActivityIntent=new Intent(this, DetailActivity.class);
-        detailActivityIntent.putExtra("name",list.get(i).name);
-        detailActivityIntent.putExtra("description",list.get(i).description);
-        detailActivityIntent.putExtra("picture_id",list.get(i).picture_id);
-        startActivity(detailActivityIntent);
-    }
+//    public void startDetailActivity(int i) {
+//        Intent detailActivityIntent=new Intent(this, DetailActivity.class);
+//        detailActivityIntent.putExtra("name",list.get(i).name);
+//        detailActivityIntent.putExtra("description",list.get(i).description);
+//        detailActivityIntent.putExtra("picture_id",list.get(i).picture_id);
+//        startActivity(detailActivityIntent);
+//    }
 
     @Override
     public void onBackPressed() {
