@@ -41,7 +41,7 @@ public class MyAdapter extends BaseAdapter {
     public View getView(int i, View view, ViewGroup viewGroup) {
         View list_item=view;
         if(list_item==null){
-            list_item= LayoutInflater.from(mContext).inflate(R.layout.inventory_row,null);
+            list_item= LayoutInflater.from(mContext).inflate(R.layout.demo1,null);
         }
         TextView name=(TextView)list_item.findViewById(R.id.text1) ;
         name.setText(mArrayList.get(i).name);
