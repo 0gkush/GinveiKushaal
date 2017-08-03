@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        android.app.FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.content_frame, new InventoryFragment())
                 .commit();
 
@@ -129,10 +129,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        android.app.FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getSupportFragmentManager();
 
         if (id == R.id.nav_first_layout) {
-            fragmentManager.beginTransaction().replace(R.id.content_frame, new ScannerFragment())
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, new ScannerFragment())
                     .commit();
         } else if (id == R.id.nav_second_layout) {
             fragmentManager.beginTransaction().replace(R.id.content_frame, new InventoryFragment())
@@ -164,7 +164,11 @@ public class MainActivity extends AppCompatActivity
                     .commit();
 
 
-        } 
+        }
+        else if (id == R.id.nav_demo_layout) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_frame, new DemoViewSliderFragment())
+                    .commit();
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

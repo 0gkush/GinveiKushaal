@@ -7,34 +7,6 @@
     android:orientation="vertical"
     android:layout_width="wrap_content">
 
-    <android.support.design.widget.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tabs"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabMode="fixed"
-            android:layout_weight="1"
-            app:tabGravity="fill">
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="All" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Running Low" />
-
-            <android.support.design.widget.TabItem
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Out of Stock" />
-        </android.support.design.widget.TabLayout>
-    </android.support.design.widget.AppBarLayout>
 
     <ListView
         android:id="@+id/inventory_list"

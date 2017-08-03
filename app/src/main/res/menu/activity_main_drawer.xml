@@ -44,6 +44,10 @@
             android:title="Logout" />
         <!--android:icon="@drawable/ic_menu_slideshow"-->
 
+        <item
+            android:id="@+id/nav_demo_layout"
+            android:title="Demo View Pager" />
+
     </group>
 
 
